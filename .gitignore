@@ -1,6 +1,8 @@
 callgrind.*
 CMakeLists.txt.user.*
-
+CMakeFiles
+test/header
+cpm-packages
 lib/
 *.0000000
 doc/html
