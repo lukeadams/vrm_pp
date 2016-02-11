@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
 
 # Include SSVCmake.
-list(APPEND CMAKE_MODULE_PATH
-    "${CMAKE_SOURCE_DIR}/../SSVCMake/cmake/modules/"
-    "${CMAKE_SOURCE_DIR}/extlibs/SSVCMake/cmake/modules/")
-
+SET(SSVDepsRoot "https://github.com/lukeadams/")
+CPM_AddModule("SSVCMake"
+	GIT_REPOSITORY "${SSVDepsRoot}SSVCMake"
+	USE_EXISTING_VER false
+	GIT_TAG "cpm")
+SET(CMAKE_MODULE_PATH ${CPM_KV_SOURCEDIR_MAP_SSVCMake}/cmake/modules ${CMAKE_MODULE_PATH})
 include(SSVCMake)
 
 # Basic project setup.
