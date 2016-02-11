@@ -3,6 +3,7 @@ CMakeLists.txt.user.*
 CMakeFiles
 test/header
 cpm-packages
+CMakeCache.txt
 lib/
 *.0000000
 doc/html
