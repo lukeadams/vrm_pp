@@ -3,7 +3,7 @@ project(vrm_pp)
 #-----------------------------------------------------------------------
 # CPM configuration
 #-----------------------------------------------------------------------
-set(CPM_MODULE_NAME ${CMAKE_PROJECT_NAME})
+set(CPM_MODULE_NAME vrm_pp)
 set(CPM_LIB_TARGET_NAME ${CPM_MODULE_NAME})
 
 if ((DEFINED CPM_DIR) AND (DEFINED CPM_UNIQUE_ID) AND (DEFINED CPM_TARGET_NAME))
@@ -37,7 +37,6 @@ endif()
 SET(SSVDepsRoot "https://github.com/lukeadams/")
 CPM_AddModule("SSVCMake"
 	GIT_REPOSITORY "${SSVDepsRoot}SSVCMake"
-	USE_EXISTING_VER false
 	GIT_TAG "cpm")
 SET(CMAKE_MODULE_PATH ${CPM_KV_SOURCEDIR_MAP_SSVCMake}/cmake/modules ${CMAKE_MODULE_PATH})
 include(SSVCMake)
