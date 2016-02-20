@@ -40,6 +40,7 @@ CPM_AddModule("SSVCMake"
 	GIT_TAG "cpm")
 SET(CMAKE_MODULE_PATH ${CPM_KV_SOURCEDIR_MAP_SSVCMake}/cmake/modules ${CMAKE_MODULE_PATH})
 include(SSVCMake)
+CPM_ExportAdditionalIncludeDir("./include")
 CPM_InitModule(${CPM_MODULE_NAME})
 
 #-----------------------------------------------------------------------
